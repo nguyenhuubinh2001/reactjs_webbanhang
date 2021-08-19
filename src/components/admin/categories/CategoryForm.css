@@ -1,0 +1,44 @@
+.MuiGrid-root.MuiGrid-container.MuiGrid-spacing-xs-3{
+    width: 90%;
+    margin: auto;
+    padding: auto;
+}
+
+
+
+.profileR-button{
+    background: #a6a0a7;
+    box-shadow: none;
+    border: none;
+    margin-left: 10px;
+}
+.profileR-button:hover {
+    background: #958a97
+}
+
+.profileR-button:focus {
+    background: #a399a5;
+    box-shadow: none
+}
+
+.profileR-button:active {
+    background: #ada2af;
+    box-shadow: none
+}
+.form-control:focus {
+    box-shadow: none;
+    border-color: #1741b3;
+     
+}
+
+
+
+.back:hover {
+    background: #ffffff;
+    color: #bb6ec2;
+    cursor: pointer;
+    font-weight : 900;
+}
+#description{
+    height: 70px;
+}

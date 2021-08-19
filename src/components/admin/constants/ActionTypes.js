@@ -1,0 +1,6 @@
+export const CHANGE_PAGE = 'CHANGE_PAGE'
+export const SORT_BY_TITLE = 'SORT_BY_TITLE'
+export const SHOW_NOFICATION = 'SHOW_NOFICATION'
+export const CHANGE_INPUT = 'CHANGE_INPUT'
+export const SHOW_TABLE = 'SHOW_TABLE'
+export const SHOW_FORM = 'SHOW_FORM'
