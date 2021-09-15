@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link, BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Link, BrowserRouter as Router} from "react-router-dom";
 
 function Sidebar(props) {
   return (
@@ -123,12 +123,30 @@ function Sidebar(props) {
       </li>
       {/* Nav Item - Charts */}
       <li className="nav-item">
-        <Link to="/admin/statistical">
-          <a className="nav-link" href="charts.html">
-            <i className="fas fa-fw fa-chart-area" />
-            <span>Thống kê</span>
-          </a>
-        </Link>
+        <a
+          className="nav-link collapsed"
+          href="#"
+          data-toggle="collapse"
+          data-target="#collapseCustomers1"
+          aria-expanded="true"
+          aria-controls="collapseCustomers"
+        >
+          <i className="fas fa-fw fa-user" />
+          <span>Thống kê</span>
+        </a>
+        <div
+          id="collapseCustomers1"
+          className="collapse"
+          aria-labelledby="headingCustomers"
+          data-parent="#accordionSidebar"
+        >
+          <div className="bg-white py-2 collapse-inner rounded">
+            <Link to="/admin/statistical">
+              <a className="collapse-item">Thông kê doanh thu</a>
+            </Link>
+            <a className="collapse-item">Thêm tài khoản</a>
+          </div>
+        </div>
       </li>
       {/* Nav Item - Tables */}
       <li className="nav-item">

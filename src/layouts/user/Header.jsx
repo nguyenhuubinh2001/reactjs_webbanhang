@@ -7,7 +7,9 @@ import {
   Link
 } from "react-router-dom";
 import getCookie from '../../utils/CookieUtils';
+
 function Header(props) {
+  const username = getCookie("username")
   const { onClickCart } = props;
   function onClickLogout(params) {
     document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
@@ -34,7 +36,7 @@ function Header(props) {
                     <li><a href="shop-grid-view-5-col.html">shop</a></li>
                     <li><Link to="/cart">Cart</Link></li>
                     <li><Link to="/myorder">My Order</Link></li>
-                    <li><a href="/login" onClick={onClickLogout}>Logout</a></li>
+                    <li><a href="/login" onClick={onClickLogout}>{username ? "LOGOUT":"LOGIN"}</a></li>
                   </ul>
                 </nav>
               </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link} from "react-router-dom";
 function Checkout(props) {
     const { submitCheckOut, datas } = props
     console.log(datas)
@@ -121,7 +122,7 @@ function Checkout(props) {
                             <div className="payment-method">
                                 <div className="payment-accordion">
                                     <div className="order-button-payment">
-                                        <input type="submit" value="Place order" onClick={submitForm} />
+                                       <input type="submit" value="Place order" onClick={submitForm} />
                                     </div>
                                 </div>
                             </div>

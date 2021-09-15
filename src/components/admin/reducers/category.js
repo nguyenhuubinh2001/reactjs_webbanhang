@@ -130,13 +130,21 @@ const category = (state = initialState, action) => {
                     return {
                         ...state,
                         isDisplay: false,
-                        data: dataDefault
+                        data: dataDefault,
+                        showNoti: {
+                            message: '',
+                            variant: ''
+                        }
                     }
                 case actionType.SHOW_FORM:
                     return {
                         ...state,
                         isDisplay: true,
-                        data: dataDefault
+                        data: dataDefault,
+                        showNoti: {
+                            message: '',
+                            variant: ''
+                        }
                     }
             default:
                 return state;

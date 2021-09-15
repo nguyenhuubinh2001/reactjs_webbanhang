@@ -22,7 +22,7 @@ import Checkout from '../../components/users/Checkout';
 import { useSnackbar } from 'notistack';
 import MyOrder from '../../components/users/MyOrder';
 import OrderDetails from '../../components/users/OrderDetails';
-
+import OrderSuccess from '../../components/users/OrderSuccess';
 function UserLayout(props) {
     const { enqueueSnackbar } = useSnackbar();
     const showNoti = (message, variant) => {
@@ -402,24 +402,25 @@ function UserLayout(props) {
                 const { data } = response;
                 if (response.status == 200) {
                     showNoti("Đặt hàng thành công", "success")
+                    dataOrder.current = []
                     setLoadCart({
                         ...loadCart
                     })
                     setLoadOrder({
                         ...loadOrder
                     })
+                    window.location.href="/orderSuccess"
                 }
                 else {
-
+                    
                 }
 
             }).catch((error) => {
-                console.log(error)
+                showNoti("Đặt hàng thất bại", "error")
             })
         }
 
     }
-
     function onChangeSearch(e) {
         const value = e.target.value
         setSearch(value)
@@ -539,6 +540,9 @@ function UserLayout(props) {
                                 onClickShowOrders = {onClickShowOrders}
                                 onClickDelete = {deleteOrder}
                             />
+                        </Route>
+                        <Route path="/orderSuccess">
+                            <OrderSuccess />
                         </Route>
                         <Route path="/">
                             <MainContent

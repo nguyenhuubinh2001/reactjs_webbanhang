@@ -23,26 +23,26 @@ function AdminLayout(props) {
     window.location.href = "/login"
   }
 
-  useEffect(() => {
-    callApi("admin", 'GET', null, null,
-      {
-        Authorization: `Bearer ${token}`,
-      }
-    ).then((response) => {
+  // useEffect(() => {
+  //   callApi("admin", 'GET', null, null,
+  //     {
+  //       Authorization: `Bearer ${token}`,
+  //     }
+  //   ).then((response) => {
 
 
-    }).catch((error) => {
-      const status = error.response.status;
-      if (status == 401) {
-        showNoti("Vui lòng đăng nhập", "error")
-        window.location.href = '/user'
-      }
-      if (status == 403) {
-        showNoti("Không có quyền Admin", "error")
-        window.location.href = '/user'
-      }
-    })
-  }, [])
+  //   }).catch((error) => {
+  //     const status = error.response.status;
+  //     if (status == 401) {
+  //       showNoti("Vui lòng đăng nhập", "error")
+  //       window.location.href = '/user'
+  //     }
+  //     if (status == 403) {
+  //       showNoti("Không có quyền Admin", "error")
+  //       window.location.href = '/user'
+  //     }
+  //   })
+  // }, [])
   return (
     <div id="wrapper">
       <Sidebar />
